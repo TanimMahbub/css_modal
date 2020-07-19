@@ -1,0 +1,349 @@
+/* =========== */
+/* RESET START
+/* =========== */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Roboto:400,500,700');
+@import url(css/font-awesome.css);
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+li {
+	list-style-type: none;
+}
+
+.tac {
+	text-align: center;
+}
+/* =========== */
+/* RESET END
+/* =========== */
+
+/*buttons start*/
+.cssmodal-btn {
+	text-transform: uppercase;
+	background: #2BBBAD;
+	color: #fff !important;
+	display: inline-block;
+	padding: 18px 36px;
+	font-size: 12.8px;
+	line-height: 12px;
+	border-radius: 2px;
+	cursor: pointer;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.exit-button {
+	width: 30px;
+	height: 30px;
+	background: #2BBBAD;
+	color: #fff !important;
+	text-align: center;
+	line-height: 30px;
+	font-size: 22px;
+	display: block;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/*buttons end*/
+
+/* ========= colors start ========*/
+/*light-green start*/
+.light-green .cssmodal-btn,
+.light-green .exit-button,
+.light-green.cssmodal-btn,
+.light-green.exit-button {
+	background: #2BBBAD;
+}
+.light-green .css-modal {
+	border: 10px solid #2BBBAD;
+}
+/*light-green end*/
+
+/*dark-green start*/
+.dark-green .cssmodal-btn,
+.dark-green .exit-button,
+.dark-green.cssmodal-btn,
+.dark-green.exit-button {
+	background: #00695c;
+}
+
+.dark-green .css-modal {
+	border: 10px solid #00695c;
+}
+/*dark-green end*/
+
+
+/*light-blue start*/
+.light-blue .cssmodal-btn,
+.light-blue .exit-button,
+.light-blue.cssmodal-btn,
+.light-blue.exit-button {
+	background: #4285F4;
+}
+
+.light-blue .css-modal {
+	border: 10px solid #4285F4;
+}
+/*light-blue end*/
+
+/*dark-blue start*/
+.dark-blue .cssmodal-btn,
+.dark-blue .exit-button,
+.dark-blue.cssmodal-btn,
+.dark-blue.exit-button {
+	background: #0d47a1;
+}
+
+.dark-blue .css-modal {
+	border: 10px solid #0d47a1;
+}
+/*dark-blue end*/
+
+/*light-purple start*/
+.light-purple .cssmodal-btn,
+.light-purple .exit-button,
+.light-purple.cssmodal-btn,
+.light-purple.exit-button {
+	background: #aa66cc;
+}
+
+.light-purple .css-modal {
+	border: 10px solid #aa66cc;
+}
+/*light-purple end*/
+
+/*dark-purple start*/
+.dark-purple .cssmodal-btn,
+.dark-purple .exit-button,
+.dark-purple.cssmodal-btn,
+.dark-purple.exit-button {
+	background: #9933CC;
+}
+
+.dark-purple .css-modal {
+	border: 10px solid #9933CC;
+}
+/*dark-purple end*/
+/* ========= colors end ========*/
+
+/* ====================== */
+/*cssmodal start*/
+/* ====================== */
+.cssmodal-container:before {
+	position: fixed;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	top: 0;
+	left: 0;
+	z-index: 9;
+	display: none;
+}
+
+.cssmodal-container:target:before {
+	display: block;
+}
+
+/* 
+   no mater how long the modal is, you can scroll it up and down, 
+   and to make that scroll you need this .cssmodal-screen element
+*/
+.cssmodal-screen { 
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+.cssmodal-container:target .cssmodal-screen {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*
+cssmodal default size and style
+*/
+.css-modal {
+	width: 600px;
+	padding: 20px;
+	padding-top: 40px;
+	background: #fff;
+	border: 10px solid #2BBBAD;
+	border-radius: 5px;
+	position: relative;
+	display: block;
+	margin-bottom: 50px;
+	top: 150px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+	visibility: hidden;
+	opacity: 0;
+
+	-webkit-transition: all .5s ease .1s;
+	transition: all .5s ease .1s;
+}
+/*
+cssmodal default end
+*/
+
+/*cssmodal small*/
+.css-modal.cssmodal-sm {
+	width: 300px;
+}
+
+/*cssmodal large*/
+.css-modal.cssmodal-lg {
+	width: 900px;
+}
+
+/*cssmodal fluid (100% width)*/
+.css-modal.cssmodal-fluid {
+	width: 100%;
+}
+
+.cssmodal-container:target .css-modal {
+	visibility: visible;
+	opacity: 1;
+	top: 50px;
+}
+
+/*the dark overlay behind the modal*/
+.overlay {
+	width: calc(100% - 30px);
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 30px;
+	display: none;
+	cursor: context-menu;
+}
+
+.cssmodal-container:target .overlay {
+	display: block;
+}
+/* ====================== */
+/*cssmodal end*/
+/* ====================== */
+
+/*google map start*/
+.contact-map-area {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#map,
+#map-2 {
+	width: 100% !important;
+	height: 500px !important;
+}
+
+.gm-style-cc,
+.gmnoprint,
+.map-parent div > a > div > img {
+	display: none;
+}
+/*google map end*/
+
+/*cssmodal-form start*/
+.form-title {
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+.cssmodal-form input {
+	width: calc(100% - 50px);
+	float: left;
+	height: 45px;
+	padding: 10px 20px;
+	border: 1px solid #ddd;
+	border-right: none;
+	margin-bottom: 15px;
+
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.cssmodal-form input:focus {
+	border: 1px solid #333;
+	border-right: none;
+}
+
+.cssmodal-form input + span {
+	width: 50px;
+	height: 45px;
+	float: right;
+	color: #333;
+	background: #ddd;
+	text-align: center;
+	line-height: 45px;
+
+	-webkit-transition: all .2s linear .1s;
+	transition: all .2s linear .1s;
+}
+
+.cssmodal-form input:focus + span {
+	background: #333;
+	color: #fff;
+}
+
+.cssmodal-form button {
+	border: none
+}
+
+.social-login a {
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 5px;
+	margin-right: 15px;
+	color: #fff !important
+}
+
+.social-login a:last-of-type {
+	margin-right: 0;
+}
+
+.google-bg {
+	background: #D6492F;
+}
+
+.facebook-bg {
+	background: #3B5998;
+}
+
+.twitter-bg {
+	background: #42C0FB;
+}
+/*cssmodal-form end*/

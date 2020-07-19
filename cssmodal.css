@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Roboto:400,500,700');
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+li {
+	list-style-type: none;
+}
+
+.clr {
+	clear: both;
+}
+
+.remove {
+	display: none;
+}
+
+.tac {
+	text-align: center;
+}
+
+.page-wrapper {
+	width: 900px;
+	margin: 100px auto;
+}
+
+.f1 {
+	font-family: 'Roboto', sans-serif;
+}
+
+.f2 {
+	font-family: 'Inconsolata', monospace;
+}
+
+.cc {
+	color: #ada997
+}
+
+.cw {
+	color: #fff
+}
+
+/*header start*/
+header {
+	padding: 130px 0;
+	background: url(img/header.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+.information {
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 12px;
+	position: fixed;
+	top: 10px;
+	right: 5px;
+	cursor: pointer;
+}
+
+.information i:first-of-type {
+	color: #ada997
+}
+
+.information i:last-of-type {
+	display: none;
+	color: #ada997
+}
+
+#info:checked + .information i:first-of-type {
+	display: none;
+}
+
+#info:checked + .information i:last-of-type {
+	display: block;
+}
+
+#info:checked ~ .header-content {
+	visibility: visible;
+	opacity: 1;
+}
+
+.header-content {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+	position: fixed;
+	padding: 10px;
+	border: 1px dashed #75715e;
+	border-right: none;
+	border-top: none;
+	white-space: nowrap;
+	color: #75715e !important;
+	background: #212121;
+
+	right: 20px;
+	top: 10px;
+	
+	font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .5px;
+}
+
+.header-content .fa {
+	font-size: 11px;
+}
+
+.logo {
+	position: absolute;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+/*header end*/
+
+.cssmodal-btn {
+	text-transform: uppercase;
+	background: #2BBBAD;
+	color: #fff !important;
+	display: inline-block;
+	padding: 18px 36px;
+	font-size: 12.8px;
+	line-height: 12px;
+	border-radius: 2px;
+	cursor: pointer;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.exit-button {
+	width: 30px;
+	height: 30px;
+	background: #2BBBAD;
+	color: #fff !important;
+	text-align: center;
+	line-height: 30px;
+	font-size: 22px;
+	display: block;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+/* ====================== */
+/*cssmodal start*/
+/* ====================== */
+.cssmodal-container:before {
+	position: fixed;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+
+.cssmodal-container:target:before {
+	display: block;
+}
+
+/* 
+   no mater how long the modal is, you can scroll it up and down, 
+   and to make that scroll you need this .cssmodal-screen element
+*/
+.cssmodal-screen { 
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+}
+
+.cssmodal-container:target .cssmodal-screen {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*
+cssmodal default size and style
+*/
+.css-modal {
+	width: 600px;
+	padding: 20px;
+	padding-top: 40px;
+	margin-bottom: 50px;
+	background: #fff;
+	border: 10px solid #2BBBAD;
+	/*border-radius: 5px;*/
+	
+	/*position*/
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	
+	/*effect*/
+	visibility: hidden;
+	opacity: 0;
+
+	-webkit-transition: all .5s ease .1s;
+	transition: all .5s ease .1s;
+}
+/*
+cssmodal default end
+*/
+
+/*cssmodal small*/
+.css-modal.cssmodal-sm {
+	width: 300px;
+}
+
+/*cssmodal large*/
+.css-modal.cssmodal-lg {
+	width: 900px;
+}
+
+/*cssmodal fluid (100% width)*/
+.css-modal.cssmodal-fluid {
+	width: 100%;
+}
+
+.cssmodal-container:target .css-modal {
+	visibility: visible;
+	opacity: 1;
+	top: 50px;
+}
+
+/*all positions*/
+.cssmodal-tl,
+.cssmodal-tr,
+.cssmodal-bl,
+.cssmodal-br {
+	position: absolute;
+	padding: 20px;
+	padding-top: 40px;
+	background: #fff;
+	border: 10px solid #2BBBAD;
+
+	visibility: hidden;
+	opacity: 0;
+
+	-webkit-transition: all .5s ease .1s;
+	transition: all .5s ease .1s;
+
+}
+
+.cssmodal-tl {
+	top: 0;
+	left: -50px;
+}
+
+.cssmodal-tr {
+	top: 0;
+	right: -50px;
+}
+
+.cssmodal-bl {
+	bottom: 0;
+	left: -50px;
+}
+
+.cssmodal-br {
+	bottom: 0;
+	right: -50px;
+}
+
+.cssmodal-container:target .cssmodal-tl {
+	visibility: visible;
+	opacity: 1;
+	left: 0;
+}
+
+.cssmodal-container:target .cssmodal-tr {
+	visibility: visible;
+	opacity: 1;
+	right: 0;
+}
+
+.cssmodal-container:target .cssmodal-bl {
+	visibility: visible;
+	opacity: 1;
+	left: 0;
+}
+
+.cssmodal-container:target .cssmodal-br {
+	visibility: visible;
+	opacity: 1;
+	right: 0;
+}
+
+/*cssmodal small*/
+.cssmodal-tl.cssmodal-sm,
+.cssmodal-tr.cssmodal-sm,
+.cssmodal-bl.cssmodal-sm,
+.cssmodal-br.cssmodal-sm {
+	width: 300px;
+}
+
+/*cssmodal large*/
+.cssmodal-tl.cssmodal-lg,
+.cssmodal-tr.cssmodal-lg,
+.cssmodal-bl.cssmodal-lg,
+.cssmodal-br.cssmodal-lg {
+	width: 900px;
+}
+
+/*cssmodal fluid (100% width)*/
+.cssmodal-tl.cssmodal-fluid,
+.cssmodal-tr.cssmodal-fluid,
+.cssmodal-bl.cssmodal-fluid,
+.cssmodal-br.cssmodal-fluid {
+	width: 100%;
+}
+/*the dark overlay behind the modal*/
+.overlay {
+	width: calc(100% - 30px);
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 30px;
+	display: none;
+	cursor: context-menu;
+}
+
+.cssmodal-container:target .overlay {
+	display: block;
+}
+/* ====================== */
+/*cssmodal end*/
+/* ====================== */
+
+/*google map start*/
+.contact-map-area {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#map,
+#map-2 {
+	width: 100% !important;
+	height: 500px !important;
+}
+
+.gm-style-cc,
+.gmnoprint,
+.map-parent div > a > div > img {
+	display: none;
+}
+/*google map end*/
+
+/*cssmodal-form start*/
+.form-title {
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+}
+
+.cssmodal-form input {
+	width: calc(100% - 50px);
+	float: left;
+	height: 45px;
+	padding: 10px 20px;
+	border: 1px solid #ddd;
+	border-right: none;
+	margin-bottom: 15px;
+
+	-webkit-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.cssmodal-form input:focus {
+	border: 1px solid #333;
+	border-right: none;
+}
+
+.cssmodal-form input + span {
+	width: 50px;
+	height: 45px;
+	float: right;
+	color: #333;
+	background: #ddd;
+	text-align: center;
+	line-height: 45px;
+
+	-webkit-transition: all .2s linear .1s;
+	transition: all .2s linear .1s;
+}
+
+.cssmodal-form input:focus + span {
+	background: #333;
+	color: #fff;
+}
+
+.cssmodal-form button {
+	border: none
+}
+
+.social-login a {
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 5px;
+	margin-right: 15px;
+	color: #fff !important
+}
+
+.social-login a:last-of-type {
+	margin-right: 0;
+}
+
+.google-bg {
+	background: #D6492F;
+}
+
+.facebook-bg {
+	background: #3B5998;
+}
+
+.twitter-bg {
+	background: #42C0FB;
+}
+/*cssmodal-form end*/
+
+
+/* ==================== */
+/* colors start */
+/* ==================== */
+.c1 {color: #2BBBAD;}
+.bgc1 {background: #2BBBAD;}
+.c-dark1 {color: #00695c;}
+.bgc-dark1 {background: #00695c;}
+ 
+.c2 {color: #4285F4;}
+.bgc2 {background: #4285F4;}
+.c-dark2 {color: #0d47a1;}
+.bgc-dark2 {background: #0d47a1;}
+ 
+.c3 {color: #9933CC;}
+.bgc3 {background: #9933CC;}
+.c-dark3 {color: #aa66cc;}
+.bgc-dark3 {background: #aa66cc;}
+
+.color-switch {
+	display: none;
+}
+
+.cs {
+	position: fixed;
+	left: 10px;
+	display: block;
+	width: 60px;
+	height: 30px;
+	border-radius: 5px;
+	cursor: pointer;
+	
+	z-index: 2;
+
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.cs:before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 5px;
+	background: inherit;
+	top: 50%;
+	right: 100%;
+}
+
+.cs:after {
+	position: absolute;
+	content: "\f00c";
+	font-family: 'FontAwesome';
+	font-size: 15px;
+	color: #fff;
+	top: calc(50% + 10px);
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	opacity: 0;
+
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.color-switch:checked + .cs:after {
+	top: 50%;
+	visibility: visible;
+	opacity: 1;
+}
+
+/*cs-1 start*/
+.cs-1:checked ~ .page-wrapper .cssmodal-btn,
+.cs-1:checked ~ .page-wrapper .exit-button {
+	background: #2BBBAD;
+}
+.cs-1:checked ~ .page-wrapper .css-modal {
+	border: 10px solid #2BBBAD;
+}
+/*cs-1 end*/
+
+/*cs-2 start*/
+.cs-2:checked ~ .page-wrapper .cssmodal-btn,
+.cs-2:checked ~ .page-wrapper .exit-button {
+	background: #00695c;
+}
+
+.cs-2:checked ~ .page-wrapper .css-modal {
+	border: 10px solid #00695c;
+}
+/*cs-2 end*/
+
+
+/*cs-3 start*/
+.cs-3:checked ~ .page-wrapper .cssmodal-btn,
+.cs-3:checked ~ .page-wrapper .exit-button {
+	background: #4285F4;
+}
+
+.cs-3:checked ~ .page-wrapper .css-modal {
+	border: 10px solid #4285F4;
+}
+/*cs-3 end*/
+
+/*cs-4 start*/
+.cs-4:checked ~ .page-wrapper .cssmodal-btn,
+.cs-4:checked ~ .page-wrapper .exit-button {
+	background: #0d47a1;
+}
+
+.cs-4:checked ~ .page-wrapper .css-modal {
+	border: 10px solid #0d47a1;
+}
+/*cs-4 end*/
+
+/*cs-5 start*/
+.cs-5:checked ~ .page-wrapper .cssmodal-btn,
+.cs-5:checked ~ .page-wrapper .exit-button {
+	background: #aa66cc;
+}
+
+.cs-5:checked ~ .page-wrapper .css-modal {
+	border: 10px solid #aa66cc;
+}
+/*cs-5 end*/
+
+/*cs-6 start*/
+.cs-6:checked ~ .page-wrapper .cssmodal-btn,
+.cs-6:checked ~ .page-wrapper .exit-button {
+	background: #9933CC;
+}
+
+.cs-6:checked ~ .page-wrapper .css-modal {
+	border: 10px solid #9933CC;
+}
+/*cs-6 end*/
+
+
+.cs--1 {
+	top: 280px;
+	background: #2BBBAD;
+}
+.cs--2 {
+	top: 320px;
+	background: #00695c;
+}
+.cs--3 {
+	top: 360px;
+	background: #4285F4;
+}
+.cs--4 {
+	top: 400px;
+	background: #0d47a1;
+}
+.cs--5 {
+	top: 440px;
+	background: #aa66cc;
+}
+.cs--6 {
+	top: 480px;
+	background: #9933CC;
+}
+/* ==================== */
+/* colors end */
+/* ==================== */
