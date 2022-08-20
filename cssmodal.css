@@ -59,10 +59,8 @@ li {
 
 /*header start*/
 header {
-	padding: 130px 0;
-	background: url(img/header.png) no-repeat center center;
-	-webkit-background-size: cover;
-	background-size: cover;
+	padding: 200px 0;
+	background: url(img/header.png) no-repeat center center / contain, #212121;
 	position: relative;
 	z-index: 1;
 }
