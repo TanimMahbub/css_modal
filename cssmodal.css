@@ -504,68 +504,63 @@ header {
 
 /*cs-1 start*/
 .cs-1:checked ~ .page-wrapper .cssmodal-btn,
-.cs-1:checked ~ .page-wrapper .exit-button {
-	background: #2BBBAD;
-}
-.cs-1:checked ~ .page-wrapper .css-modal {
-	border: 10px solid #2BBBAD;
-}
+.cs-1:checked ~ .page-wrapper .exit-button {background: #2BBBAD}
+.cs-1:checked ~ .page-wrapper .css-modal,
+.cs-1:checked ~ .page-wrapper .cssmodal-tl,
+.cs-1:checked ~ .page-wrapper .cssmodal-tr,
+.cs-1:checked ~ .page-wrapper .cssmodal-bl,
+.cs-1:checked ~ .page-wrapper .cssmodal-br {border: 10px solid #2BBBAD}
 /*cs-1 end*/
 
 /*cs-2 start*/
 .cs-2:checked ~ .page-wrapper .cssmodal-btn,
-.cs-2:checked ~ .page-wrapper .exit-button {
-	background: #00695c;
-}
-
-.cs-2:checked ~ .page-wrapper .css-modal {
-	border: 10px solid #00695c;
-}
+.cs-2:checked ~ .page-wrapper .exit-button {background: #00695c}
+.cs-2:checked ~ .page-wrapper .css-modal,
+.cs-2:checked ~ .page-wrapper .cssmodal-tl,
+.cs-2:checked ~ .page-wrapper .cssmodal-tr,
+.cs-2:checked ~ .page-wrapper .cssmodal-bl,
+.cs-2:checked ~ .page-wrapper .cssmodal-br {border: 10px solid #00695c}
 /*cs-2 end*/
 
 
 /*cs-3 start*/
 .cs-3:checked ~ .page-wrapper .cssmodal-btn,
-.cs-3:checked ~ .page-wrapper .exit-button {
-	background: #4285F4;
-}
-
-.cs-3:checked ~ .page-wrapper .css-modal {
-	border: 10px solid #4285F4;
-}
+.cs-3:checked ~ .page-wrapper .exit-button {background: #4285F4}
+.cs-3:checked ~ .page-wrapper .css-modal,
+.cs-3:checked ~ .page-wrapper .cssmodal-tl,
+.cs-3:checked ~ .page-wrapper .cssmodal-tr,
+.cs-3:checked ~ .page-wrapper .cssmodal-bl,
+.cs-3:checked ~ .page-wrapper .cssmodal-br {border: 10px solid #4285F4}
 /*cs-3 end*/
 
 /*cs-4 start*/
 .cs-4:checked ~ .page-wrapper .cssmodal-btn,
-.cs-4:checked ~ .page-wrapper .exit-button {
-	background: #0d47a1;
-}
-
-.cs-4:checked ~ .page-wrapper .css-modal {
-	border: 10px solid #0d47a1;
-}
+.cs-4:checked ~ .page-wrapper .exit-button {background: #0d47a1}
+.cs-4:checked ~ .page-wrapper .css-modal,
+.cs-4:checked ~ .page-wrapper .cssmodal-tl,
+.cs-4:checked ~ .page-wrapper .cssmodal-tr,
+.cs-4:checked ~ .page-wrapper .cssmodal-bl,
+.cs-4:checked ~ .page-wrapper .cssmodal-br {border: 10px solid #0d47a1}
 /*cs-4 end*/
 
 /*cs-5 start*/
 .cs-5:checked ~ .page-wrapper .cssmodal-btn,
-.cs-5:checked ~ .page-wrapper .exit-button {
-	background: #aa66cc;
-}
-
-.cs-5:checked ~ .page-wrapper .css-modal {
-	border: 10px solid #aa66cc;
-}
+.cs-5:checked ~ .page-wrapper .exit-button {background: #aa66cc}
+.cs-5:checked ~ .page-wrapper .css-modal,
+.cs-5:checked ~ .page-wrapper .cssmodal-tl,
+.cs-5:checked ~ .page-wrapper .cssmodal-tr,
+.cs-5:checked ~ .page-wrapper .cssmodal-bl,
+.cs-5:checked ~ .page-wrapper .cssmodal-br {border: 10px solid #aa66cc}
 /*cs-5 end*/
 
 /*cs-6 start*/
 .cs-6:checked ~ .page-wrapper .cssmodal-btn,
-.cs-6:checked ~ .page-wrapper .exit-button {
-	background: #9933CC;
-}
-
-.cs-6:checked ~ .page-wrapper .css-modal {
-	border: 10px solid #9933CC;
-}
+.cs-6:checked ~ .page-wrapper .exit-button {background: #9933CC}
+.cs-6:checked ~ .page-wrapper .css-modal,
+.cs-6:checked ~ .page-wrapper .cssmodal-tl,
+.cs-6:checked ~ .page-wrapper .cssmodal-tr,
+.cs-6:checked ~ .page-wrapper .cssmodal-bl,
+.cs-6:checked ~ .page-wrapper .cssmodal-br {border: 10px solid #9933CC}
 /*cs-6 end*/
 
 
