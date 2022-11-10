@@ -65,4 +65,7 @@ But if you want to change the position, then you have to **replace** the `.css-m
 </div>
 ```
 
+You see the `href="#close"` in `<a href="#close" class="overlay"></a>` and `<a href="#close" class="cssmodal-btn">Close modal</a>` and there is no `id` by that name. The reason for that is, if you close the modal with just `#` like this `href="#"` then it will take you to the top of the page no matter where you are in the browser. So, if you close the modal this way (`href="#close"` without any `id` by that name) then your position in the browser will not change.
+
+
 This is an experiment, let's see where it goes.
