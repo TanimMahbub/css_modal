@@ -10,7 +10,7 @@
 		<title>Pure CSS Modal</title>
 		<!-- ========= page title end ======== -->
 
-		<meta name="description" content="Pure CSS3 Modal- no js requirement">
+		<meta name="description" content="Pure CSS3 Modal- no js">
 		<meta name="keywords" content="CSS3, modal, popup, css3 popup, css3 modal">
 		<meta name="author" content="Tanim Mahbub">
 		<!-- ======= meta tags end here =======-->
@@ -27,7 +27,7 @@
 		<!-- ============ main css end ============ -->
 	</head>
 	<body>
-		
+		<!-- header start -->
 		<header>
 			<input type="checkbox" class="remove" id="info" checked>
 			<label for="info" class="information">
@@ -45,7 +45,9 @@
 	        </div>
 	        <img src="img/logo.png" alt="logo" class="logo">
 		</header>
+		<!-- header end -->
 
+		<!-- colors start -->
 		<input type="radio" name="colors" class="color-switch cs-1" id="cs1" checked>
 		<label for="cs1" class="cs cs--1"></label>
 		<input type="radio" name="colors" class="color-switch cs-2" id="cs2">
@@ -58,9 +60,12 @@
 		<label for="cs5" class="cs cs--5"></label>
 		<input type="radio" name="colors" class="color-switch cs-6" id="cs6">
 		<label for="cs6" class="cs cs--6"></label>
+		<!-- colors end -->
 
+		<!-- ================== -->
+		<!-- page-wrapper start -->
 		<div class="page-wrapper">
-
+			<!-- modal buttons start -->
 			<div class="tac">
 				<a href="#cssmodal" class="cssmodal-btn">CSS Modal Default</a>
 				<a href="#cssmodal-2" class="cssmodal-btn">CSS Modal sm</a>
@@ -71,19 +76,21 @@
 			<br><br>
 
 			<div class="tac">
-				<a href="#cssmodal-7" class="cssmodal-btn">Top Left</a>
-				<a href="#cssmodal-8" class="cssmodal-btn">Top Right</a>
-				<a href="#cssmodal-9" class="cssmodal-btn">Bottom Left</a>
-				<a href="#cssmodal-10" class="cssmodal-btn">Bottom Right</a>
+				<a href="#cssmodal-5" class="cssmodal-btn">Top Left</a>
+				<a href="#cssmodal-6" class="cssmodal-btn">Top Right</a>
+				<a href="#cssmodal-7" class="cssmodal-btn">Bottom Left</a>
+				<a href="#cssmodal-8" class="cssmodal-btn">Bottom Right</a>
 			</div>
 
 			<br><br>
 
 			<div class="tac">
-				<a href="#cssmodal-5" class="cssmodal-btn">Log in form</a>
-				<a href="#cssmodal-6" class="cssmodal-btn">Sign up form</a>
+				<a href="#cssmodal-9" class="cssmodal-btn">Log in form</a>
+				<a href="#cssmodal-10" class="cssmodal-btn">Sign up form</a>
 			</div>
+			<!-- modal buttons end -->
 
+			<!-- cssmodals start -->
 			<div class="cssmodal-container" id="cssmodal">
 				<div class="cssmodal-screen">
 					<a href="#close" class="overlay"></a>
@@ -95,7 +102,7 @@
 						<a href="#close" class="cssmodal-btn">Close modal</a>
 					</div>
 				</div>
-			</div>
+			</div><!-- /#cssmodal default -->
 
 			<div class="cssmodal-container" id="cssmodal-2">
 				<div class="cssmodal-screen">
@@ -108,7 +115,7 @@
 						<a href="#close" class="cssmodal-btn">Close modal</a>
 					</div>
 				</div>
-			</div>
+			</div><!-- /#cssmodal-2 small -->
 			
 			<div class="cssmodal-container" id="cssmodal-3">
 				<div class="cssmodal-screen">
@@ -128,7 +135,7 @@
 						<a href="#close" class="cssmodal-btn">Close modal</a>
 					</div>
 				</div>
-			</div>
+			</div><!-- /#cssmodal-3 large -->
 			
 			<div class="cssmodal-container" id="cssmodal-4">
 				<div class="cssmodal-screen">
@@ -148,9 +155,61 @@
 						<a href="#close" class="cssmodal-btn">Close modal</a>
 					</div>
 				</div>
-			</div>
+			</div><!-- /#cssmodal-4 fluid -->
 
 			<div class="cssmodal-container" id="cssmodal-5">
+				<div class="cssmodal-screen">
+					<a href="#close" class="overlay"></a>
+					<div class="cssmodal-tl cssmodal-sm">
+						<a href="#close" class="exit-button">
+							<i class="fa fa-close"></i>
+						</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
+						<a href="#close" class="cssmodal-btn">Close modal</a>
+					</div>
+				</div>
+			</div><!-- /#cssmodal-5 top left -->
+
+			<div class="cssmodal-container" id="cssmodal-6">
+				<div class="cssmodal-screen">
+					<a href="#close" class="overlay"></a>
+					<div class="cssmodal-tr cssmodal-sm">
+						<a href="#close" class="exit-button">
+							<i class="fa fa-close"></i>
+						</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
+						<a href="#close" class="cssmodal-btn">Close modal</a>
+					</div>
+				</div>
+			</div><!-- /#cssmodal-6 top right -->
+
+			<div class="cssmodal-container" id="cssmodal-7">
+				<div class="cssmodal-screen">
+					<a href="#close" class="overlay"></a>
+					<div class="cssmodal-bl cssmodal-sm">
+						<a href="#close" class="exit-button">
+							<i class="fa fa-close"></i>
+						</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
+						<a href="#close" class="cssmodal-btn">Close modal</a>
+					</div>
+				</div>
+			</div><!-- /#cssmodal-7 bottom left -->
+
+			<div class="cssmodal-container" id="cssmodal-8">
+				<div class="cssmodal-screen">
+					<a href="#close" class="overlay"></a>
+					<div class="cssmodal-br cssmodal-sm">
+						<a href="#close" class="exit-button">
+							<i class="fa fa-close"></i>
+						</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
+						<a href="#close" class="cssmodal-btn">Close modal</a>
+					</div>
+				</div>
+			</div><!-- /#cssmodal-8 bottom right -->
+
+			<div class="cssmodal-container" id="cssmodal-9">
 				<div class="cssmodal-screen">
 					<a href="#close" class="overlay"></a>
 					<div class="css-modal">
@@ -188,9 +247,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- /#cssmodal-9 login -->
 
-			<div class="cssmodal-container" id="cssmodal-6">
+			<div class="cssmodal-container" id="cssmodal-10">
 				<div class="cssmodal-screen">
 					<a href="#close" class="overlay"></a>
 					<div class="css-modal">
@@ -232,61 +291,12 @@
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="cssmodal-container" id="cssmodal-7">
-				<div class="cssmodal-screen">
-					<a href="#close" class="overlay"></a>
-					<div class="cssmodal-tl cssmodal-sm">
-						<a href="#close" class="exit-button">
-							<i class="fa fa-close"></i>
-						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
-						<a href="#close" class="cssmodal-btn">Close modal</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="cssmodal-container" id="cssmodal-8">
-				<div class="cssmodal-screen">
-					<a href="#close" class="overlay"></a>
-					<div class="cssmodal-tr cssmodal-sm">
-						<a href="#close" class="exit-button">
-							<i class="fa fa-close"></i>
-						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
-						<a href="#close" class="cssmodal-btn">Close modal</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="cssmodal-container" id="cssmodal-9">
-				<div class="cssmodal-screen">
-					<a href="#close" class="overlay"></a>
-					<div class="cssmodal-bl cssmodal-sm">
-						<a href="#close" class="exit-button">
-							<i class="fa fa-close"></i>
-						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
-						<a href="#close" class="cssmodal-btn">Close modal</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="cssmodal-container" id="cssmodal-10">
-				<div class="cssmodal-screen">
-					<a href="#close" class="overlay"></a>
-					<div class="cssmodal-br cssmodal-sm">
-						<a href="#close" class="exit-button">
-							<i class="fa fa-close"></i>
-						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae tempora in sequi perferendis accusamus soluta aut nobis laborum, quia quod, nisi perspiciatis nemo</p><br><br>
-						<a href="#close" class="cssmodal-btn">Close modal</a>
-					</div>
-				</div>
-			</div>
-
+			</div><!-- /#cssmodal-10 signup -->
+			<!-- cssmodals end -->
 		</div>
+		<!-- page-wrapper end -->
+		<!-- ================ -->
+
 		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 		<script>
 			const apiKey = 'pk.eyJ1IjoidGFuaW0tbWFoYnViIiwiYSI6ImNrczdqMjVtZzA3dHIyb24wdHl5bzVnNGMifQ.tiPAjgQ8_m5qyGOd1xRsRQ';
