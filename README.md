@@ -41,7 +41,7 @@ This was an experiment for CSS :target Selector when it was introduced for the v
 </div>
 ```
 
-But if you want to change the position, then you have to ==**replace**== the `.css-modal` class with the *position-class* you want. There are 4 more position-classes: 
+But if you want to change the position, then you have to **replace** the `.css-modal` class with the *position-class* you want. There are 4 more position-classes: 
 
 | **Position Class Names** | **Positions** |
 | ---- | ---- |
